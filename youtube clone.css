@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto',sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 15px;
+}
+main{
+    height: calc(100vh-70px);
+    display: flex;
+    background-color: #ffffff;
+}
+.sidebar{
+     height: 100%;
+     width: 25%;
+     background-color: white;
+     overflow-y: hidden;
+}
+@media(max-width:768px){
+    .sidebar{
+        display: none;
+    }
+}
+.logoleft{
+    display: flex;
+    align-items: center;
+}
+.logoleft #menu{
+    padding: 0 7px;
+    cursor: pointer;
+}
+.search{
+    display: flex;
+}
+.search form{
+    display: flex;
+    border: 1px solid #ddd;
+    height: 45px;
+}
+.search input{
+    width: 600px;
+    padding: 10px;
+    border: 0;
+    height: 100%;
+    border-radius: 2px 0 0 2px;
+}
+input:focus{
+    outline: none;
+    border: 1px solid #ddd;
+}
+.search button{
+    height: 100%;
+    width: 60px;
+    border: none;
+}
+.iconsright button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.mic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+.material-symbols-outlined{
+    padding:  0 7px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(224, 224, 224);
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+    margin-top: 25%;
+    background-color: rgb(255, 255, 255);
+    height: 550px;
+}
+.nav button{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    height: 45px;
+}
+.nav button:hover{
+    background-color: rgb(224, 224, 224);
+}
+
+hr{
+    height: 3px;
+    width: 215px;
+    background-color: #e5e5e5;
+    border: none;
+}
+.content{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px 5px;
+    padding: 50px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.content iframe{
+    border-radius: 7.5%;
+}
+.video1,.video2,.video3,.video4,.video5,.video6,.video7,.video8,.video9{
+    width: 100%;
+}
+.a figure{
+    padding: 7% 7%;
+}
+.a figcaption img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.watch1,.watch2,.watch3,.watch4,.watch5,.watch6,.watch7,.watch8,.watch9{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+.watch1 button,.watch2 button,.watch3 button,.watch4 button,.watch5 button,.watch6 button,.watch7 button,.watch8 button,.watch9 button{
+    width: 90%;
+    opacity: 0.6;
+}
+ .a:hover +.watch1{display: block;} .a:hover +.watch4{display: block;} .a:hover +.watch6{display: block;} .a:hover +.watch8{display: block;}
+ .a:hover +.watch2{display: block;} .a:hover +.watch5{display: block;} .a:hover +.watch7{display: block;} .a:hover +.watch9{display: block;}
+ .a:hover +.watch3{display: block;}
+ .a:hover {transform: scale(1.2);}
+ .shorts{
+    height: calc(100vh-70px);
+    display: grid;
+    grid-column: auto;
+    margin:auto 6.5% auto 25% ;
+ }
+ .shorts .figure{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    padding: 4.5%;
+    
+ }
+ .shorts .figure iframe{
+      width: 120px;
+      height: 240px;
+      border-radius: 7.5%;
+ }
+.shorts .figure .material-symbols-outlined{
+    display: none;
+}
+.figure iframe:hover +.g .material-symbols-outlined{display: block;}.figure iframe:hover +.d .material-symbols-outlined{display: block;}
+.figure iframe:hover +.b .material-symbols-outlined{display: block;}.figure iframe:hover +.e .material-symbols-outlined{display: block;}
+.figure iframe:hover +.c .material-symbols-outlined{display: block;}.figure iframe:hover +.f .material-symbols-outlined{display: block;}
+
+
+@media (max-width:768px){
+    .sidebar{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+}
+@media(max-width:900px){
+    .search input{
+        width: 25rem;
+    }
+}

@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)https://www.freecodecamp.org/news/how-to-build-a-website-with-html-and-css-step-by-step/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        
+            <title>HTML and CSS Project – How to Build A YouTube Clone Step by Step</title>
+        
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+        
+            <link rel="stylesheet" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;" href="./freecodecamp_files/css2">
+        
+
+        
+        
+    <link rel="stylesheet" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;" href="./freecodecamp_files/prism.min.css">
+<noscript><link rel="stylesheet" href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism.min.css"></noscript>
+<link rel="stylesheet" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;" href="./freecodecamp_files/prism-unescaped-markup.css">
+<noscript><link rel="stylesheet" href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-unescaped-markup.css"></noscript>
+
+<script src="./freecodecamp_files/f(3).txt"></script><script type="text/javascript" async="" src="./freecodecamp_files/js"></script><script type="text/javascript" async="" src="./freecodecamp_files/analytics.js.download"></script><script src="./freecodecamp_files/f(4).txt" id="google_shimpl"></script><script async="" src="./freecodecamp_files/gtm.js.download"></script><script defer="" type="text/javascript" src="./freecodecamp_files/prism.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-unescaped-markup.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-markup-templating.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-bash.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-c.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-clojure.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-cpp.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-csharp.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-css.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-docker.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-elixir.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-erlang.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-git.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-go.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-graphql.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-haskell.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-java.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-javascript.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-json.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-jsx.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-julia.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-kotlin.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-lua.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-markup.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-php.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-python.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-r.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-ruby.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-rust.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-scala.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-sql.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-swift.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-typescript.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-yaml.min.js.download"></script>
+<script defer="" type="text/javascript" src="./freecodecamp_files/prism-dart.min.js.download"></script>
+
+
+
+        
+        <link rel="stylesheet" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;" href="./freecodecamp_files/global-26e2f3cde9.css">
+        <link rel="stylesheet" type="text/css" href="./freecodecamp_files/screen-5a4f9d5c91.css">
+        <link rel="stylesheet" type="text/css" href="./freecodecamp_files/search-bar-124f5f949c.css">
+
+        
+        <script defer="" src="./freecodecamp_files/algoliasearch.min.js.download"></script>
+        <script defer="" src="./freecodecamp_files/autocomplete.min.js.download"></script>
+
+        
+        <script defer="" src="./freecodecamp_files/dayjs.min.js.download"></script>
+        <script defer="" src="./freecodecamp_files/localizedFormat.min.js.download"></script>
+        <script defer="" src="./freecodecamp_files/relativeTime.min.js.download"></script>
+
+        
+        
+            <script defer="" src="./freecodecamp_files/en.min.js.download"></script>
+        
+
+        
+        <script>let client,index;document.addEventListener("DOMContentLoaded",(()=>{client=algoliasearch("QMJYL5WYTI","89770b24481654192d7a5c402c6ad9a0"),index=client.initIndex("news")})),document.addEventListener("DOMContentLoaded",(()=>{const e=window.screen.width,t=window.screen.height,n=e>=767&&t>=768?8:5,o=document.getElementById("search-form"),s=document.getElementById("search-input"),a=document.getElementById("dropdown-container");let i,d,c;s.addEventListener("input",(e=>{i=e.target.value})),o.addEventListener("submit",(e=>{e.preventDefault(),function(){if(d=document.getElementsByClassName("aa-cursor")[0],d&&i){const e=d.querySelector("a").href;window.location.assign(e)}else!d&&i&&c&&window.location.assign(`https://www.freecodecamp.org/news/search?query=${i}`)}()}));const l=autocomplete("#search-input",{hint:!1,keyboardShortcuts:["s",191],openOnFocus:!0,appendTo:a,debug:!0},[{source:autocomplete.sources.hits(index,{hitsPerPage:n}),debounce:250,templates:{suggestion:e=>(c=!0,`\n            <a href="${e.url}">\n              <div class="algolia-result">\n                <span>${e._highlightResult.title.value}</span>\n              </div>\n            </a>\n          `),empty:()=>(c=!1,'\n            <div class="aa-suggestion footer-suggestion no-hits-footer">\n              <div class="algolia-result">\n                <span>\n                  No tutorials found\n                </span>\n              </div>\n            </div>\n          '),footer:e=>{if(!e.isEmpty)return`\n              <div class="aa-suggestion footer-suggestion">\n                <a id="algolia-footer-selector" href="https://www.freecodecamp.org/news/search?query=${i}">\n                  <div class="algolia-result algolia-footer">\n                    See all results for ${i}\n                  </div>\n                </a>\n              </div>\n            `}}}]).on("autocomplete:selected",((e,t,n,o)=>{d=t?t.url:`https://www.freecodecamp.org/news/search?query=${i}`,"click"!==o.selectionMethod&&"tabKey"!==o.selectionMethod&&c&&window.location.assign(d)}));document.addEventListener("click",(e=>{e.target!==s&&l.autocomplete.close()}))})),document.addEventListener("DOMContentLoaded",(()=>{dayjs.extend(dayjs_plugin_localizedFormat),dayjs.extend(dayjs_plugin_relativeTime),dayjs.locale("en")}));const isAuthenticated=document.cookie.split(";").some((e=>e.trim().startsWith("jwt_access_token="))),isDonor=document.cookie.split(";").some((e=>e.trim().startsWith("isDonor=true")));</script>
+
+        
+        
+    
+        <script data-ad-client="ca-pub-9482786369113753" src="./freecodecamp_files/f(5).txt" crossorigin="anonymous" async="" data-checked-head="true"></script>
+        <script data-test-label="toggle-ad-layout" defer="" src="./freecodecamp_files/toggle-ad-layout-099254b065.js.download"></script>
+    
+
+
+        
+        
+    <script defer="" src="./freecodecamp_files/fitvids-5d12072cbf.js.download"></script>
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const t=document.querySelector(".post-full-content");t&&fitVids(t)}));</script>
+
+
+        
+        
+
+        <link rel="icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" type="image/png">
+        
+        
+            <link rel="canonical" href="https://www.freecodecamp.org/news/how-to-build-a-website-with-html-and-css-step-by-step/">
+        
+        <meta name="referrer" content="no-referrer-when-downgrade">
+
+        
+
+        
+    <link rel="amphtml" href="https://www.freecodecamp.org/news/how-to-build-a-website-with-html-and-css-step-by-step/amp/">
+    <meta name="description" content="In this tutorial we will build a YouTube clone step by step. You&#39;ll learn how to create layouts and add content to those layouts. If you have been struggling to build a real website with HTML &amp; CSS, this is the article for you. Because I am about to teach">
+
+    
+    <meta property="og:site_name" content="freeCodeCamp.org">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="HTML and CSS Project – How to Build A YouTube Clone Step by Step">
+    
+        <meta property="og:description" content="In this tutorial we will build a YouTube clone step by step. You&#39;ll learn how to create layouts and add content to those layouts. If you have been struggling to build a real website with HTML &amp; CSS, this is the article for you. Because I am about to teach">
+    
+    <meta property="og:url" content="https://www.freecodecamp.org/news/how-to-build-a-website-with-html-and-css-step-by-step/">
+    <meta property="og:image" content="https://www.freecodecamp.org/news/content/images/2022/01/photo-1460925895917-afdab827c52f.jpg">
+    <meta property="article:published_time" content="2022-01-26T21:32:57.000Z">
+    <meta property="article:modified_time" content="2022-01-26T21:32:57.000Z">
+    
+        <meta property="article:tag" content="Web Development">
+    
+        <meta property="article:tag" content="HTML">
+    
+        <meta property="article:tag" content="CSS">
+    
+        <meta property="article:tag" content="Projects">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/freecodecamp">
+    
+        <meta property="article:author" content="ayobami.ogundiran">
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HTML and CSS Project – How to Build A YouTube Clone Step by Step">
+    
+        <meta name="twitter:description" content="In this tutorial we will build a YouTube clone step by step. You&#39;ll learn how to create layouts and add content to those layouts. If you have been struggling to build a real website with HTML &amp; CSS, this is the article for you. Because I am about to teach">
+    
+    <meta name="twitter:url" content="https://www.freecodecamp.org/news/how-to-build-a-website-with-html-and-css-step-by-step/">
+    <meta name="twitter:image" content="https://www.freecodecamp.org/news/content/images/2022/01/photo-1460925895917-afdab827c52f.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Ogundiran Ayobami">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Web Development, HTML, CSS, Projects">
+    <meta name="twitter:site" content="@freecodecamp">
+    
+        <meta name="twitter:creator" content="@codingnninja">
+    
+
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="400">
+
+
+        
+    <script type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "Article",
+	"publisher": {
+		"@type": "Organization",
+		"name": "freeCodeCamp.org",
+		"url": "https://www.freecodecamp.org/news/",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg",
+			"width": 2100,
+			"height": 240
+		}
+	},
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://www.freecodecamp.org/news/content/images/2022/01/photo-1460925895917-afdab827c52f.jpg",
+		"width": 600,
+		"height": 400
+	},
+	"url": "https://www.freecodecamp.org/news/how-to-build-a-website-with-html-and-css-step-by-step/",
+	"mainEntityOfPage": {
+		"@type": "WebPage",
+		"@id": "https://www.freecodecamp.org/news/"
+	},
+	"datePublished": "2022-01-26T21:32:57.000Z",
+	"dateModified": "2022-01-26T21:32:57.000Z",
+	"keywords": "Web Development, HTML, CSS, Projects",
+	"description": "In this tutorial we will build a YouTube clone step by step. You&#x27;ll learn how to\ncreate layouts and add content to those layouts.\n\nIf you have been struggling to build a real website with HTML &amp; CSS, this is the\narticle for you. Because I am about to teach you to do it step by step to reduce\nyour struggle.\n\nWe&#x27;ll discuss how to make the layout of the YouTube clone with HTML and CSS and\nyou&#x27;ll learn how to make a two-column layout.\n\nJust wait: If you&#x27;re a total beginner and you don&#x27;t even underst",
+	"headline": "HTML and CSS Project – How to Build A YouTube Clone Step by Step",
+	"author": {
+		"@type": "Person",
+		"name": "Ogundiran Ayobami",
+		"url": "https://www.freecodecamp.org/news/author/codingnninja/",
+		"sameAs": [
+			"https://www.youtoocancode.com",
+			"https://www.facebook.com/ayobami.ogundiran",
+			"https://twitter.com/codingnninja"
+		],
+		"image": {
+			"@type": "ImageObject",
+			"url": "https://www.freecodecamp.org/news/content/images/2021/02/IMG_-8os7pl.jpg",
+			"width": 2000,
+			"height": 2000
+		}
+	}
+}</script>
+
+
+        <meta name="generator" content="Eleventy">
+        <link rel="alternate" type="application/rss+xml" title="freeCodeCamp.org" href="https://www.freecodecamp.org/news/rss/">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com/">
+
+<!-- Web Monetization (https://webmonetization.org/) -->
+<meta name="monetization" content="$ilp.uphold.com/LJmbPn7WD4JB">
+<!-- end Web Monetization -->
+
+<!-- dataLayer setup -->
+<script>
+window.dataLayer = window.dataLayer || [];
+</script>
+<!-- End dataLayer setup -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5D6RKKP');</script>
+<!-- End Google Tag Manager -->
+
+
+<meta name="google-site-verification" content="b4tITLzEeeZGEpvD4mGNf3khKM4fvqejQaz9SYBQP8E">
+
+        
+    <meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><style id="fit-vids-style">.fluid-width-video-container{flex-grow: 1;width:100%;}.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><link rel="preload" href="./freecodecamp_files/f(6).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(6).txt"></script><link rel="preload" href="./freecodecamp_files/f(7).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(7).txt"></script><link rel="preload" href="./freecodecamp_files/f(6).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(6).txt"></script><link rel="preload" href="./freecodecamp_files/f(7).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(7).txt"></script><link rel="preload" href="./freecodecamp_files/f(6).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(6).txt"></script><link rel="preload" href="./freecodecamp_files/f(7).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(7).txt"></script><link rel="preload" href="./freecodecamp_files/f(6).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(6).txt"></script><link rel="preload" href="./freecodecamp_files/f(7).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(7).txt"></script><link rel="preload" href="./freecodecamp_files/f(6).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(6).txt"></script><link rel="preload" href="./freecodecamp_files/f(7).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(7).txt"></script><link rel="preload" href="./freecodecamp_files/f(6).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(6).txt"></script><link rel="preload" href="./freecodecamp_files/f(7).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(7).txt"></script><link rel="preload" href="./freecodecamp_files/f(6).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(6).txt"></script><link rel="preload" href="./freecodecamp_files/f(7).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(7).txt"></script><link rel="preload" href="./freecodecamp_files/f(6).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(6).txt"></script><link rel="preload" href="./freecodecamp_files/f(7).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(7).txt"></script><link rel="preload" href="./freecodecamp_files/f(6).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(6).txt"></script><link rel="preload" href="./freecodecamp_files/f(7).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(7).txt"></script><link rel="preload" href="./freecodecamp_files/f(6).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(6).txt"></script><link rel="preload" href="./freecodecamp_files/f(7).txt" as="script"><script type="text/javascript" src="./freecodecamp_files/f(7).txt"></script></head>
+    
+    
+        <body class="home-template">
+    
+        <div class="site-wrapper" style="height: auto !important; min-height: 0px !important;">
+            <nav class="site-nav nav-padding">
+    <div class="site-nav-left">
+        
+<form id="search-form" data-test-label="search-bar">
+    <div role="search" class="searchbox__wrapper">
+        <label class="fcc_sr_only" for="search-input">
+            Search
+        </label>
+        <input type="search" placeholder="
+    Search 9,500+ tutorials
+" id="search-input" class="aa-input" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style=""><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Lato, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+        <button type="submit" class="ais-SearchBox-submit">
+            <svg class="ais-SearchBox-submitIcon" xmlns="https://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 40 40">
+    <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path>
+</svg>
+
+            <span class="fcc_sr_only">Submit your search query</span>
+        </button>
+        <div id="dropdown-container"><span class="algolia-autocomplete" style="position: absolute; z-index: 100; display: none; direction: ltr;"><span class="aa-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="display: block; left: 0px; right: auto;"><div class="aa-dataset-1"></div></span></span></div>
+    </div>
+</form>
+
+    </div>
+    <div class="site-nav-middle">
+        <a class="site-nav-logo" href="https://www.freecodecamp.org/news" data-test-label="site-nav-logo"><img src="./freecodecamp_files/fcc_primary.svg" alt="freeCodeCamp.org"></a>
+    </div>
+    <div class="site-nav-right">
+        <div class="nav-group">
+            <a class="nav-forum" id="nav-forum" rel="noopener noreferrer" href="https://forum.freecodecamp.org/" target="_blank" data-test-label="forum-button">Forum</a>
+            <a class="toggle-button-nav" id="nav-donate" rel="noopener noreferrer" href="https://www.freecodecamp.org/donate/" target="_blank" data-test-label="donate-button">Donate</a>
+        </div>
+    </div>
+</nav>
+
+
+            
+            <a class="banner" id="banner" data-test-label="banner" rel="noopener noreferrer" target="_blank" href="https://www.freecodecamp.org/" text-variation="default">
+    <p id="banner-text">Learn to code — <span>free 3,000-hour curriculum</span></p>
+</a>
+
+
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const e=document.getElementById("banner"),t=document.getElementById("banner-text");isAuthenticated?(t.innerHTML="Support our charity and our mission. <span>Donate to freeCodeCamp.org</span>.",e.href="https://www.freecodecamp.org/donate",e.setAttribute("text-variation","authenticated")):isDonor?(t.innerHTML="Thank you for supporting freeCodeCamp through <span>your donations</span>.",e.href="https://www.freecodecamp.org/news/how-to-donate-to-free-code-camp/",e.setAttribute("text-variation","donor")):(t.innerHTML="Learn to code — <span>free 3,000-hour curriculum</span>",e.href="https://www.freecodecamp.org/",e.setAttribute("text-variation","default"))}));</script>
+
+
+            <div id="error-message"></div>
+
+            
+    <main id="site-main" class="post-template site-main outer" style="height: auto !important;">
+        <div class="inner ad-layout" style="height: auto !important;">
+            <article class="post-full post " style="height: auto !important;">
+                <header class="post-full-header">
+                    <section class="post-full-meta">
+                        <time class="post-full-meta-date" datetime="Wed Jan 26 2022 21:32:57 GMT+0000 (Coordinated Universal Time)">
+                            January 26, 2022
+                        </time>
+                        
+                            <span class="date-divider">/</span>
+                            <a dir="ltr" href="https://www.freecodecamp.org/news/tag/web-development/">
+                                #Web Development
+                            </a>
+                        
+                    </section>
+                    <h1 class="post-full-title">HTML and CSS Project – How to Build A YouTube Clone Step by Step</h1>
+                </header>
+                <div class="post-full-author-header" data-test-label="author-header-no-bio">
+                    
+                        
+                            
+    
+    
+    
+
+    <section class="author-card" data-test-label="author-card">
+        
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w60/2021/02/IMG_-8os7pl.jpg 60w" sizes="60px" src="./freecodecamp_files/IMG_-8os7pl.jpg" class="author-profile-image" alt="Ogundiran Ayobami" width="2000" height="2000" onerror="this.style.display=&#39;none&#39;" data-test-label="profile-image">
+  
+        
+
+        <section class="author-card-content author-card-content-no-bio">
+            <span class="author-card-name">
+                <a href="https://www.freecodecamp.org/news/author/codingnninja/" data-test-label="profile-link">
+                    
+                        Ogundiran Ayobami
+                    
+                </a>
+            </span>
+            
+        </section>
+    </section>
+
+                        
+                    
+                </div>
+                
+                    <figure class="post-full-image">
+                        
+    <picture>
+      <source media="(max-width: 700px)" sizes="1px" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 1w">
+      <source media="(min-width: 701px)" sizes="(max-width: 800px) 400px, (max-width: 1170px) 700px, 1400px" srcset="https://www.freecodecamp.org/news/content/images/size/w300/2022/01/photo-1460925895917-afdab827c52f.jpg 300w,https://www.freecodecamp.org/news/content/images/size/w600/2022/01/photo-1460925895917-afdab827c52f.jpg 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2022/01/photo-1460925895917-afdab827c52f.jpg 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/photo-1460925895917-afdab827c52f.jpg 2000w">
+      <img onerror="this.style.display=&#39;none&#39;" src="./freecodecamp_files/photo-1460925895917-afdab827c52f.jpg" alt="HTML and CSS Project – How to Build A YouTube Clone Step by Step" ,="" width="600" height="400">
+    </picture>
+  
+                    </figure>
+                
+                <section class="post-full-content" style="height: auto !important; min-height: 0px !important;">
+                    <div class="post-and-sidebar" style="height: auto !important;">
+                        <section class="post-content ">
+                            
+<p>In this tutorial we will build a YouTube clone step by step. You'll learn how to create layouts and add content to those layouts.</p>
+<p>If you have been struggling to build a real website with HTML &amp; CSS, this is the article for you. Because I am about to teach you to do it step by step to reduce your struggle.</p>
+<p>We'll discuss how to make the layout of the YouTube clone with HTML and CSS and you'll learn how to make a two-column layout.</p>
+<p>Just wait: If you're a total beginner and you don't even understand the difference between HTML and CSS, you can check out the video below to learn everything you need to get started...</p>
+<p><a href="https://www.youtube.com/watch?v=dXC4EEkO1vI"><img src="./freecodecamp_files/0.jpg" alt="HTML crash course" width="480" height="360" loading="lazy"></a></p>
+<p>It's important to break things into smaller pieces to make our projects easier to build. So, we have to break this YouTube clone into smaller units that we'll be building step by step.</p>
+<h2 id="youtubeclonebreakdown">YouTube Clone Breakdown</h2>
+<p>In the YouTube clone we'll be building, the website has about 6 units:</p>
+<p><img src="./freecodecamp_files/youtube-clone-repeation-1.PNG" alt="youtube-clone-repeation-1" width="1366" height="726" loading="lazy"></p>
+<p>The <strong>Header</strong> contains three sections (left, center and right). The left section contains the logo and menu, the center contains the search box and an icon, and the right contains navigation icons. The icons are based on similar elements, which means that we design an icon element and then copy, paste, and edit it to create the others.</p>
+<p>The <strong>Main</strong> body contains two sections (sidebar and content). The navigation links in the sidebar are also similar, so they are just one thing. The same thing happens to the videos in the content section.</p>
+<p>So, our YouTube clone has a header, main, sidebar, content, video-card, navigation link and navigation icon as the major units. That is the breakdown of the units of the web page we want to create.</p>
+<h2 id="youtubeclonelayout">YouTube Clone Layout</h2>
+<p>The first thing we have to do is create the layout structure of the YouTube clone with HTML. We'll do that with the below code:</p>
+<pre class=" language-js"><code class=" language-js"><span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta http<span class="token operator">-</span>equiv<span class="token operator">=</span><span class="token string">"X-UA-Compatible"</span> content<span class="token operator">=</span><span class="token string">"IE=edge"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"viewport"</span> content<span class="token operator">=</span><span class="token string">"width=device-width, initial-scale=1.0"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Material Icons <span class="token operator">--</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">"https://fonts.googleapis.com/icon?family=Material+Icons"</span> rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token constant">CSS</span> File <span class="token operator">--</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"styles/index.css"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Youtube Clone <span class="token keyword">with</span> <span class="token constant">HTML</span> <span class="token operator">&amp;</span> <span class="token constant">CSS</span><span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>header <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"header"</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>header<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>main<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"side-bar"</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"content"</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>main<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Main Body Ends <span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre>
+<p>In this tutorial, I assume you have an understanding of how to use HTML meta tags and how to link a CSS file. If you don’t, you can learn more about them in the video I added above. But you don’t need to understand them for what we are learning in this lesson, so keep on reading.</p>
+<p>We have a header tag to create the header section of the YouTube clone. We'll add the YouTube logo, search box, and other navigation icons to the header later.</p>
+<p>There is also the main section that contains the side-bar and content. The side-bar will contain some navigation links while the content will contain videos. So, that is it for the structure with just HTML.</p>
+<p>Wait! Our code doesn't look too beautiful after running. Well, we'll fix that with CSS. So let’s add CSS to it to really create a YouTube layout.</p>
+<h3 id="cssfortheyoutubeclone">CSS for the YouTube Clone</h3>
+<h4 id="step1usetheimportincss">Step 1: Use the @import in CSS</h4>
+<pre><code>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;display=swap');
+</code></pre>
+<p>Let’s start with “import url(‘path’)...What does it do? We use it to link to the Google font called Roboto so that we can use it as the font of our website.</p>
+<h4 id="step2resethtmldefaultstyles">Step 2: Reset HTML default styles</h4>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">*</span> <span class="token punctuation">{</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The asterisk * is a CSS selector that selects all HTML tags on our page. We set their margin and padding to 0. We then set their box-sizing to border-box. Why do we do that?</p>
+<p>We want width or height, border, margin, and padding to add up to be the total length. This is what I mean: in CSS, if a box has width of 100px and padding of 10px, the width of the box will now be 110px</p>
+<p>But we don't want that – we want everything to be 100px. Width should still be 100px including the margin of 10px instead of making it 110px. That is what <code>box-sizing: border-box</code> does.</p>
+<p>Note: when you're using it, you will start to better understand how it works – but for now, I just wanted to give some insight a beginner can quickly relate to.</p>
+<h4 id="step3setthefontfamily">Step 3: Set the font-family</h4>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">body</span> <span class="token punctuation">{</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Roboto'</span><span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>We select the body tag and set its font-family to Roboto and use sans-serif as a fall-back in case Roboto is not available.</p>
+<h4 id="step4styletheheader">Step 4: Style the header</h4>
+<pre class=" language-css"><code class=" language-css"><span class="token comment">/* header section*/</span>
+<span class="token selector">.header</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span>
+    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 60px<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>The <code>.header</code> class name is used to select (or connect to) the header section of our website so that we can add some styles to it.</p>
+<p>We set its display property to flex to create a layout out of it, and then we can easily divide it into sections. We will divide it into sections later.</p>
+<p><code>Justify-content: space-between</code> means we want the contents in the header to have space between them once there are more than one.</p>
+<p><code>Align-items: centre</code> is used to move all the contents of the header to the centre-left of your screen. That is called vertical alignment. We finally set the <code>height</code> of the <code>header</code> to 60px and its padding to 15px.</p>
+<h4 id="step5settheheightofthemainsection">Step 5: Set the height of the main section</h4>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">main</span> <span class="token punctuation">{</span>
+   <span class="token property">height</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>100vh - 70px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+   <span class="token property">background-color</span><span class="token punctuation">:</span> #f9f9f9<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+</code></pre>
+<p>We set the <code>height</code> of the main section to <code>calc( 100vh - 70px</code>)...What does it mean? V stands for a <code>viewport</code>, which is the visible part of a window’s screen without scrolling. “height” means vertical length, and we can also use “w” which means width - horizontal length.</p>
+<p>In short, 100vh means the total height that is visible in a browser without scrolling. And we use calc ( 100vh - 70px) to run a calculation that subtract 70px from 100vh.</p>
+<p>We set its display property to flex to create a layout out of it. Finally, we set its background colour to <code>#f9f99f</code> which is a kind of silver or ash.</p>
+<h4 id="step6hidethescrollbar">Step 6: Hide the scrollbar</h4>
+<pre class=" language-css"><code class=" language-css"><span class="token comment">/* Sidebar */</span> 
+<span class="token selector">.side-bar</span> <span class="token punctuation">{</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 17%<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+    <span class="token property">overflow-y</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> 
+</code></pre>
+<p>The <code>height</code> of the .side-bar is set to 100% of its parent. That means it will have the same height as its parent. Its width is set to 17% of its parent and background colour set to white.</p>
+<p>Hey! What is <code>overflow-y: hidden</code>? When Twitter loads 10 tweets at once, you can’t see everything at once and you have to scroll, right? In this case, we hide the scroll bar. Gracias!</p>
+<h4 id="step7addmediaqueriesforresponsiveness">Step 7: Add media queries for responsiveness</h4>
+<pre class=" language-css"><code class=" language-css"><span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 768px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.side-bar</span> <span class="token punctuation">{</span>
+      <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>We use this media query to make a website responsive on mobile, tablets, and desktop. When the YouTube clone is on a device whose screen is less than or equal to 768px (like mobile &amp; tablet), the sidebar will disappear. Also, max-width: 768px means that a device’s screen can be less or equal to 768px.</p>
+<p>Alright, we have built the layout of our YouTube clone. Below is the result…</p>
+<p><img src="./freecodecamp_files/87SgHIdIE.jpg" alt="87SgHIdIE" width="600" height="400" loading="lazy"></p>
+<h2 id="howtoaddcontenttotheheadersection">How to Add Content to the Header Section</h2>
+<p>In this part, we are going to discuss how to divide an element into sections and add content to the header section.</p>
+<p>In short, we are dividing the header section of the YouTube clone into three sections: left, center, and right. And each of the sections contains some tags. Let's get started!</p>
+<h3 id="step1addchildrenandgrandchildrentotheheader">Step 1: Add children and grandchildren to the header</h3>
+<p>Here, we will simply add HTML tags to the header section of the YouTube Clone. We'll do just that with the code below:</p>
+<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logo left<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>menu<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>menu<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://www.freecodecamp.org/news/content/images/2022/01/yt-logo.png<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+ 
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>search center<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Search<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>search<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons mic<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>mic<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+ 
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icons right<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>videocam<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>apps<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>notifications<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons display-this<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>account_circle<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>After dividing the header into three sections by adding three separate blocks of code, it is time to use CSS to make it more beautiful. Let’s get started.</p>
+<h3 id="step2styletheleftsection">Step 2: Style the left section</h3>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">.left</span> <span class="token punctuation">{</span>
+ <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+ <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.left #menu</span> <span class="token punctuation">{</span>
+ <span class="token property">padding</span><span class="token punctuation">:</span> 0 7px<span class="token punctuation">;</span>
+ <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Don’t forget, we set the <code>justify-content</code> property of the header to space-between, which means there will be equal space between every tag in the header.</p>
+<p>Now, we gave a class <code>left</code> because it should be to the left side. We set its display property to flex to create sections with the layout out of it. Its children are aligned to the left-center of the header. We also access the menu that is inside the left section with its <code>id</code>.</p>
+<p>We set its <code>padding top and bottom</code> to 0 and its <code>padding left and right</code> to 7px. Its <code>cursor</code> property is set to the pointer so that when the mouse is on it, it will show a pointing finger.</p>
+<h3 id="step3stylethecentersectionanditsform">Step 3: Style the center section and its form</h3>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">.search</span> <span class="token punctuation">{</span>
+ <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.search form</span> <span class="token punctuation">{</span>
+ <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+ <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #ddd<span class="token punctuation">;</span>
+ <span class="token property">height</span><span class="token punctuation">:</span> 45px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Hey! You should know what we do in the search class by now. :)</p>
+<p>We set its display property to flex so that we can create a layout with its children. We do the same to the form which is inside of the search/center section.</p>
+<p>Its border thickness is set to 1px, type to solid, and color to #ddd (something silver or ash).</p>
+<h3 id="step4styletheinputinthesearchform">Step 4: Style the input in the search form</h3>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">.search input</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 600px<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span>10px<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 2px 0 0 2px
+<span class="token punctuation">}</span>
+
+<span class="token selector">input:focus</span> <span class="token punctuation">{</span>
+  <span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #ddd<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>We select the <code>input</code> which is inside the seach section with <code>.search input</code>. We set its border-radius to 2px top, 0 right, 0 bottom, and 2px left. Then, what is border-radius? It is the curved edges of an object with four angles.</p>
+<h3 id="step5stylethesearchandmiciconsbuttons">Step 5: Style the search and mic icons/buttons</h3>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">.search button</span> <span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 60px<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ 
+<span class="token selector">.mic</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The button inside the search section is also selected with the <code>.search button</code>. Its height is set to 100% of its parent. We don’t want it to have any border so we set its border to 0.</p>
+<p>We access the microphone icon with its class name <code>.mic</code> and set its margin-top to 10px so that it will move down a bit.</p>
+<p>Finally, let's style all the material-icons we have on the web page:</p>
+<pre class=" language-css"><code class=" language-css">  <span class="token selector">.material-icons</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>100<span class="token punctuation">,</span> 100<span class="token punctuation">,</span> 100<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 0 7px<span class="token punctuation">;</span>
+    <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>Hurry! We have added children and sections to the header of the YouTube clone. Check out the final result below:</p>
+<p><img src="./freecodecamp_files/Youtube-clone-with-header-contents.PNG" alt="Youtube-clone-with-header-contents" width="600" height="400" loading="lazy"></p>
+<h2 id="howtoaddcontenttothesidebar">How to Add Content to the Sidebar</h2>
+<p>In this part, we are going to discuss how to add navigation links to the YouTube clone. In short, we will add a bunch of links to the existing sidebar.</p>
+<h3 id="step1addchildrenandgrandchildrentothesidebar">Step 1: Add children and grandchildren to the sidebar</h3>
+<p>We will add below HTML code to the sidebar:</p>
+<pre class=" language-html"><code class=" language-html"><span class="token comment">&lt;!-- &lt;div class=”side-bar”&gt; --&gt;</span>
+
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-link active<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>Home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- &lt;/div&gt; --&gt;</span>
+</code></pre>
+<p>Then, we need to first style the navbar, which is the wrapper for all the links:</p>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">.nav</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>The only thing I will explain here is flex-direction. This determines whether we want the children to appear in a column (vertical) or row (horizontal). In this case we go with a horizontal display.</p>
+<p>Then, let's style the nav-link above with CSS as shown below:</p>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">.nav-link</span> <span class="token punctuation">{</span>
+   <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+   <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+   <span class="token property">padding</span><span class="token punctuation">:</span> 12px 25px<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+ 
+<span class="token selector">.nav-link span</span> <span class="token punctuation">{</span>
+   <span class="token property">margin-left</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+ 
+<span class="token selector">.nav-link:hover</span> <span class="token punctuation">{</span>
+   <span class="token property">background</span><span class="token punctuation">:</span> #e5e5e5<span class="token punctuation">;</span>
+   <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+
+<span class="token selector">.active</span> <span class="token punctuation">{</span>
+   <span class="token property">background</span><span class="token punctuation">:</span> #e5e5e5<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Oops – there is nothing to explain here because I have explained many similar concepts already!</p>
+<p>Okay, let’s talk about <code>.home:hover</code>. The styles in it will only be applied whenever we move our cursor over the home navigation link. That is it.</p>
+<p>Hey…wait. We have many links in the sidebar, so how are we going to create that? Well, we just do what every developer loves - copy and paste and then edit it as in below:</p>
+<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span>”side-bar”</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-link active<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>Home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-link<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>local_fire_department<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>Trending<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-link<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>subscriptions<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>Subscriptions<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>After pasting three links, we want to make them into separate categories by using the </p><hr> tag to create a line that separates them from the next category. Now, let’s style the hr tag.<p></p>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">hr</span> <span class="token punctuation">{</span>
+   <span class="token property">height</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
+   <span class="token property">background-color</span><span class="token punctuation">:</span> #e5e5e5<span class="token punctuation">;</span>
+   <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+</code></pre>
+<p>Then, we will add the remaining code after the hr tag as in below:</p>
+<pre class=" language-html"><code class=" language-html"><span class="token comment">&lt;!-- &lt;div class="nav"&gt;
+     hr --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-link<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>library_add_check<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>Library<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-link<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>history<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>History<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-link<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>play_arrow<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>Your Videos<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-link<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>watch_later<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>Watch Later<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-link<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>thumb_up<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>Liked Videos<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- &lt;/div&gt; --&gt;</span>
+</code></pre>
+<p>Wow, we are done with the sidebar of the YouTube clone and below is the result we get:</p>
+<p><img src="./freecodecamp_files/youtube-clone-with-nav-content.PNG" alt="youtube-clone-with-nav-content" width="600" height="400" loading="lazy"></p>
+<h2 id="howtoaddvideostothecontentsection">How to Add Videos to the Content Section</h2>
+<p>In this part of the YouTube Clone tutorial, we will add videos to the content area. You need to duplicate video (not videos) into many places to make it look like Youtube and you can edit them with unique Youtube video information if it's available.</p>
+<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>videos<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- a video starts --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>video<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>thumbnail<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://img.youtube.com/vi/zUwB_imVjmg/maxresdefault.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>details<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>author<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://yt3.ggpht.com/bpzY-S4DYlbTeOpY5hIA7qz_hcbMkgvLAugtwKBGTTImNnWAGudX0y53bo_fJZ0auypxrWkUiw=s88-c-k-c0x00ffffff-no-rj<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>
+                    Introverts &amp; Content Creation | Sumudu Siriwardana
+                 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+                 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                        Francesco Ciulla
+                  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+                  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span> 2M Views • 3 Months Ago <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+   <span class="token comment">&lt;!-- a video Ends --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>Now, let apply CSS to it.</p>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">.content</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #f9f9f9<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 15px 15px<span class="token punctuation">;</span>
+  <span class="token property">border-top</span><span class="token punctuation">:</span> 1px solid #ddd<span class="token punctuation">;</span>
+  <span class="token property">overflow-y</span><span class="token punctuation">:</span> scroll<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.videos</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> row<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> space-around<span class="token punctuation">;</span>
+  <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.video</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 270px<span class="token punctuation">;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>If you check the style for <code>.videos</code>, you will see <code>flex-wrap</code>. It is the only property I have not explained before, so let’s explain it.</p>
+<p>When the screen can only take four items, for example, other items will be moved to another row. That is what “flex-wrap” does.</p>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">.thumbnail</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 170px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.thumbnail img</span> <span class="token punctuation">{</span>
+  <span class="token property">object-fit</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 94%<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.author img</span> <span class="token punctuation">{</span>
+  <span class="token property">object-fit</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+  <span class="token property">margin-right</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The only thing you may not understand above because we haven’t explained it before is <code>object-fit: cover</code>. Then how do we use it?</p>
+<p><code>object-fit</code> in this case is used to clip the image to its container so as to remove overflow (areas where the image is bigger than its container) in height and width:</p>
+<pre class=" language-css"><code class=" language-css"><span class="token selector">.details</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ 
+<span class="token selector">.title</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ 
+<span class="token selector">.title h3</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>3<span class="token punctuation">,</span> 3<span class="token punctuation">,</span> 3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 18px<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 14px<span class="token punctuation">;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 6px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ 
+<span class="token selector">.title a,
+span</span> <span class="token punctuation">{</span>
+  <span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>96<span class="token punctuation">,</span> 96<span class="token punctuation">,</span> 96<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>In this case, we make a layout out of <code>.details</code> and because we don’t set its flex-direction to property, it will be set to row – which is its default value. You see that a layout is also made out of the title and set its children to appear in a column by setting flex-direction to column.</p>
+<p>We select the h3 tag that is inside <code>.title</code> and we set its color to somewhat black…I will explain how to understand the color code later.</p>
+<p><code>line-height</code> is used to set the height of a line of text and in this case, we set it to 18px.</p>
+<p>Finally we use <code>.title a, span</code> to select the anchor tag in <code>.title</code>. We also select all span tags on the page and set their text-decoration to none.</p>
+<p>So what is text decoration? It has a design such as an underline that an anchor tag has, and we hide it in this case by setting it to none. We have added videos to the YouTube Clone and the final result is below:</p>
+<p><img src="./freecodecamp_files/youtube-clone-repeation.PNG" alt="youtube-clone-completed" width="600" height="400" loading="lazy"></p>
+<h2 id="howtomaketheyoutubecloneresponsive">How to Make the YouTube Clone Responsive</h2>
+<p>In this part of the tutorial, we are going to make the YouTube Clone we have built a bit responsive. How do we do it? Well, we will use CSS media queries. Now, let get started!</p>
+<p>So, we will add the CSS code below to the CSS file of the YouTube Clone.</p>
+<pre class=" language-css"><code class=" language-css"> <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 768px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.side-bar</span> <span class="token punctuation">{</span>
+      <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">.search</span> <span class="token punctuation">{</span>
+      <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><code>@media (max-width: 768px) { }</code> is used to set the device screen sizes that the code in the media query will apply to.</p>
+<p>In this example, <code>max-width: 768px</code> means that the styles in the media query will be applied to any screen size that is equal to or less than 768px.</p>
+<p>So, whenever the screen size in use is 768px or less, we will hide the sidebar and the search input by setting their display property to none.</p>
+<pre class=" language-css"><code class=" language-css">  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 900px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.search input</span> <span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 25rem<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<p>Finally, we make the the search input a bit smaller whenever the screen size of the device in use is less or equal to 900px.</p>
+<p>That is it.</p>
+<p>Hurraaaay...we're done in making the YouTube clone. Now go and build your own and don't forget to play with it.</p>
+<p>Add or remove some things from the tutorial to be sure you trully understand what you're doing. Good luck!</p>
+<h2 id="onemorething">One more thing</h2>
+<p><a href="https://www.twitter.com/codingnninja">Ayobami Ogundiran</a> loves writing history with software development and is currently helping those who are struggling to understand and build projects with HTML, CSS and JavaScript through You Too Can Code.</p>
+<p>Join me via <a href="https://t.me/+HEUn1Y-ME6GW9ssD">Telegram group</a> or <a href="https://discord.com/invite/WGtNSHUnDZ">Discord group</a>.</p>
+<!--kg-card-end: markdown-->
+
+                        </section>
+                        
+                            <div class="sidebar" style="height: auto !important;">
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper" style="height: auto !important; min-height: 0px !important;">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_1_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./freecodecamp_files/ads.html" data-google-container-id="a!2" data-google-query-id="CMq5jKn28fwCFTgLBgAdFAAMYg" data-load-complete="true"></iframe></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper" style="height: auto !important; min-height: 0px !important;">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_2_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./freecodecamp_files/ads(1).html" data-google-container-id="a!3" data-google-query-id="CMeyjKn28fwCFW8hBgAdedQAQA" data-load-complete="true"></iframe></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper" style="height: auto !important; min-height: 0px !important;">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_3_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./freecodecamp_files/ads(2).html" data-google-container-id="a!4" data-google-query-id="CKjDjKn28fwCFQMGBgAdM3wGbA" data-load-complete="true"></iframe></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper" style="height: auto !important; min-height: 0px !important;">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><div id="aswift_4_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./freecodecamp_files/ads(3).html" data-google-container-id="a!5"></iframe></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper" style="height: auto !important; min-height: 0px !important;">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><div id="aswift_5_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_5" name="aswift_5" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./freecodecamp_files/ads(4).html" data-google-container-id="a!6"></iframe></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper" style="height: auto !important; min-height: 0px !important;">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><div id="aswift_6_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_6" name="aswift_6" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./freecodecamp_files/ads(5).html" data-google-container-id="a!7"></iframe></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper" style="height: auto !important; min-height: 0px !important;">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><div id="aswift_7_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_7" name="aswift_7" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./freecodecamp_files/ads(6).html" data-google-container-id="a!8"></iframe></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper" style="height: auto !important; min-height: 0px !important;">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_8_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_8" name="aswift_8" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9482786369113753&amp;output=html&amp;h=600&amp;slotname=5720086888&amp;adk=3402239630&amp;adf=2584974063&amp;pi=t.ma~as.5720086888&amp;w=300&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1675172132&amp;rafmt=1&amp;format=300x600&amp;url=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Fhow-to-build-a-website-with-html-and-css-step-by-step%2F&amp;fwr=0&amp;fwrattr=true&amp;rh=280&amp;rpe=1&amp;resp_fmts=4&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTA5LjAuNTQxNC4xMjAiLFtdLGZhbHNlLG51bGwsIjY0IixbWyJOb3RfQSBCcmFuZCIsIjk5LjAuMC4wIl0sWyJHb29nbGUgQ2hyb21lIiwiMTA5LjAuNTQxNC4xMjAiXSxbIkNocm9taXVtIiwiMTA5LjAuNTQxNC4xMjAiXV0sZmFsc2Vd&amp;dt=1675168285974&amp;bpp=1&amp;bdt=40312&amp;idt=56762&amp;shv=r20230125&amp;mjsv=m202301190101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D08503026d7320dc9-226a2f2394db0091%3AT%3D1675168345%3ART%3D1675168345%3AS%3DALNI_MbT-Hk1lRaaOwR8iYiSxxGCD4Nh1w&amp;gpic=UID%3D00000bd016393779%3AT%3D1675168345%3ART%3D1675168345%3AS%3DALNI_MbKC0DdBTwytDBejAOr4vD0M9l7hw&amp;prev_fmts=0x0%2C300x600%2C300x600%2C300x600%2C300x600%2C300x600%2C300x600%2C300x600&amp;nras=1&amp;correlator=3772615089296&amp;frm=20&amp;pv=1&amp;ga_vid=928056642.1675168339&amp;ga_sid=1675168339&amp;ga_hid=2090342114&amp;ga_fc=1&amp;u_tz=120&amp;u_his=1&amp;u_h=720&amp;u_w=1280&amp;u_ah=720&amp;u_aw=1280&amp;u_cd=24&amp;u_sd=1.5&amp;dmc=8&amp;adx=862&amp;ady=11441&amp;biw=1263&amp;bih=591&amp;scr_x=0&amp;scr_y=9102&amp;eid=44759875%2C44759926%2C44759837%2C44773809%2C31071546%2C31071581%2C31071766%2C31071792%2C31071948%2C44779793%2C44782816&amp;oid=2&amp;psts=AD37Y7tPFDkyyx6SVzJVDejXemU3kVx8uWfpWsTgmzchWlrd1t8UJ3v_zyy-GQ8y-3tQdxmnvvxs3Wfz3Dm4%2CAD37Y7u2DvMOy3LFzN8VJwFpUZND3fDqtrxGDJ7-cUNcM-ccl4IznqRNnvx8WhCz96XImtqOfNcMENhY0mkm%2CAD37Y7v1-5fPBBRKHv6aZZKcXYRxbhbIzuw_5mDGy2hUTEa1lm0kmjmZoYJxx4hJPcIVMuT9GV2ZAe028C7h&amp;pvsid=1418849895268326&amp;tmod=1193169258&amp;uas=1&amp;nvt=1&amp;eae=0&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C591&amp;vis=1&amp;rsz=%7Co%7CeEbr%7C&amp;abl=NS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;ifi=9&amp;uci=a!9&amp;btvi=8&amp;fsb=1&amp;xpc=2QpuXBxPMU&amp;p=https%3A//www.freecodecamp.org&amp;dtd=M" data-google-container-id="a!9" data-google-query-id="COms2L728fwCFdTiUQodsEINqA" data-load-complete="true"></iframe></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper" style="height: auto !important; min-height: 0px !important;">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_9_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_9" name="aswift_9" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9482786369113753&amp;output=html&amp;h=600&amp;slotname=5720086888&amp;adk=3402239630&amp;adf=3185614939&amp;pi=t.ma~as.5720086888&amp;w=300&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1675172134&amp;rafmt=1&amp;format=300x600&amp;url=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Fhow-to-build-a-website-with-html-and-css-step-by-step%2F&amp;fwr=0&amp;fwrattr=true&amp;rh=280&amp;rpe=1&amp;resp_fmts=4&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTA5LjAuNTQxNC4xMjAiLFtdLGZhbHNlLG51bGwsIjY0IixbWyJOb3RfQSBCcmFuZCIsIjk5LjAuMC4wIl0sWyJHb29nbGUgQ2hyb21lIiwiMTA5LjAuNTQxNC4xMjAiXSxbIkNocm9taXVtIiwiMTA5LjAuNTQxNC4xMjAiXV0sZmFsc2Vd&amp;dt=1675168285975&amp;bpp=1&amp;bdt=40313&amp;idt=57759&amp;shv=r20230125&amp;mjsv=m202301190101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D08503026d7320dc9-226a2f2394db0091%3AT%3D1675168345%3ART%3D1675168345%3AS%3DALNI_MbT-Hk1lRaaOwR8iYiSxxGCD4Nh1w&amp;gpic=UID%3D00000bd016393779%3AT%3D1675168345%3ART%3D1675168345%3AS%3DALNI_MbKC0DdBTwytDBejAOr4vD0M9l7hw&amp;prev_fmts=0x0%2C300x600%2C300x600%2C300x600%2C300x600%2C300x600%2C300x600%2C300x600%2C300x600&amp;nras=1&amp;correlator=3772615089296&amp;frm=20&amp;pv=1&amp;ga_vid=928056642.1675168339&amp;ga_sid=1675168339&amp;ga_hid=2090342114&amp;ga_fc=1&amp;u_tz=120&amp;u_his=1&amp;u_h=720&amp;u_w=1280&amp;u_ah=720&amp;u_aw=1280&amp;u_cd=24&amp;u_sd=1.5&amp;dmc=8&amp;adx=862&amp;ady=12897&amp;biw=1263&amp;bih=591&amp;scr_x=0&amp;scr_y=10541&amp;eid=44759875%2C44759926%2C44759837%2C44773809%2C31071546%2C31071581%2C31071766%2C31071792%2C31071948%2C44779793%2C44782816&amp;oid=2&amp;psts=AD37Y7tPFDkyyx6SVzJVDejXemU3kVx8uWfpWsTgmzchWlrd1t8UJ3v_zyy-GQ8y-3tQdxmnvvxs3Wfz3Dm4%2CAD37Y7u2DvMOy3LFzN8VJwFpUZND3fDqtrxGDJ7-cUNcM-ccl4IznqRNnvx8WhCz96XImtqOfNcMENhY0mkm%2CAD37Y7v1-5fPBBRKHv6aZZKcXYRxbhbIzuw_5mDGy2hUTEa1lm0kmjmZoYJxx4hJPcIVMuT9GV2ZAe028C7h&amp;pvsid=1418849895268326&amp;tmod=1193169258&amp;uas=1&amp;nvt=1&amp;eae=0&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C591&amp;vis=1&amp;rsz=%7Co%7CeEbr%7C&amp;abl=NS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;ifi=10&amp;uci=a!a&amp;btvi=9&amp;fsb=1&amp;xpc=U7xicso89o&amp;p=https%3A//www.freecodecamp.org&amp;dtd=M" data-google-container-id="a!a" data-google-query-id="CN6H_L_28fwCFZWx1Qod6nEHcg" data-load-complete="true"></iframe></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><div id="aswift_10_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><div id="aswift_11_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><div id="aswift_12_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><div id="aswift_13_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><div id="aswift_14_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><div id="aswift_15_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><div id="aswift_16_host" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                            </div>
+                        
+                    </div>
+                    <hr>
+                    
+                        <div class="post-full-author-header" data-test-label="author-header-with-bio">
+                            
+                                
+    
+    
+    
+
+    <section class="author-card" data-test-label="author-card">
+        
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w60/2021/02/IMG_-8os7pl.jpg 60w" sizes="60px" src="./freecodecamp_files/IMG_-8os7pl.jpg" class="author-profile-image" alt="Ogundiran Ayobami" width="2000" height="2000" onerror="this.style.display=&#39;none&#39;" loading="lazy" data-test-label="profile-image">
+  
+        
+
+        <section class="author-card-content ">
+            <span class="author-card-name">
+                <a href="https://www.freecodecamp.org/news/author/codingnninja/" data-test-label="profile-link">
+                    
+                        Ogundiran Ayobami
+                    
+                </a>
+            </span>
+            
+                
+                    <p data-test-label="author-bio">Ayobami loves writing history with JavaScript(React) and PHP(Laravel). He has been making programming fun to learn for learners. Check him out on YouTube: https://bit.ly/3usOu3s </p>
+                
+            
+        </section>
+    </section>
+
+                            
+                        </div>
+                        <hr>
+                    
+
+                    
+                    
+                        
+    
+
+
+<p data-test-label="social-row-cta" class="social-row">
+    If you read this far, tweet to the author to show them you care. <button id="tweet-btn" class="cta-button" data-test-label="tweet-button" onclick="window.open(
+    &#39;https://twitter.com/intent/tweet?text=Thank%20you%20%40codingnninja%20for%20writing%20this%20helpful%20article.%0A%0AHTML%20and%20CSS%20Project%20%E2%80%93%20How%20to%20Build%20A%20YouTube%20Clone%20Step%20by%20Step%0A%0Ahttps://www.freecodecamp.org/news/how-to-build-a-website-with-html-and-css-step-by-step/&#39;,
+    &#39;share-twitter&#39;,
+    &#39;width=550, height=235&#39;
+  ); return false;">Tweet a thanks</button>
+</p>
+
+
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const t=document.getElementById("tweet-btn"),e=window.location,n="HTML%20and%20CSS%20Project%20%E2%80%93%20How%20to%20Build%20A%20YouTube%20Clone%20Step%20by%20Step".replace(/&#39;/g,"%27"),o="",i="@codingnninja",r=Boolean("");let a;if(r&&(o||i)){const t={originalPostAuthor:"",currentPostAuthor:"Ogundiran Ayobami"};a=encodeURIComponent(`Thank you ${o||t.originalPostAuthor} for writing this helpful article, and ${i||t.currentPostAuthor} for translating it.`)}else!r&&i&&(a=encodeURIComponent(`Thank you ${i} for writing this helpful article.`));const c=`window.open(\n    '${a?`https://twitter.com/intent/tweet?text=${a}%0A%0A${n}%0A%0A${e}`:`https://twitter.com/intent/tweet?text=${n}%0A%0A${e}`}',\n    'share-twitter',\n    'width=550, height=235'\n  ); return false;`;t.setAttribute("onclick",c)}));</script>
+
+
+                        
+
+<div class="learn-cta-row" data-test-label="learn-cta-row">
+    <p>
+        Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. <a href="https://www.freecodecamp.org/learn/" class="cta-button" id="learn-to-code-cta" rel="noopener noreferrer" target="_blank">Get started</a>
+    </p>
+</div>
+
+                    
+                </section>
+                
+                    <div class="banner-ad bottom">
+                        <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-9482786369113753" data-ad-slot="5720086888" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><div id="aswift_17_host" style="border: none; height: 280px; width: 1060px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"></div></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                    </div>
+                
+            </article>
+        </div>
+    </main>
+
+
+            
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-desc-col">
+                <p data-test-label="tax-exempt-status">freeCodeCamp is a donor-supported tax-exempt 501(c)(3) charity organization (United States Federal Tax Identification Number: 82-0779546)</p>
+                <p data-test-label="mission-statement">Our mission: to help people learn to code for free. We accomplish this by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public. We also have thousands of freeCodeCamp study groups around the world.</p>
+                <p data-test-label="donation-initiatives">Donations to freeCodeCamp go toward our education initiatives, and help pay for servers, services, and staff.</p>
+                <p class="footer-donation" data-test-label="donate-text">
+                    You can <a href="https://www.freecodecamp.org/donate/" class="inline" rel="noopener noreferrer" target="_blank">make a tax-deductible donation here</a>.
+                </p>
+            </div>
+            <div class="trending-guides" data-test-label="trending-guides">
+                <div class="col-header">Trending Guides</div>
+                <div class="trending-guides-row">
+                    <div class="footer-col footer-col-1">
+                        <a href="https://www.freecodecamp.org/news/python-list-append-how-to-add-an-item-to-a-list-in-python/" rel="noopener noreferrer" target="_blank">Python list .append()
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-zip-zip-function-in-python/" rel="noopener noreferrer" target="_blank">Python .zip() Function
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-become-a-quality-assurance-engineer-qa-engineer-career-guide/" rel="noopener noreferrer" target="_blank">What is a QA Engineer?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-print-without-new-line-print-on-the-same-line/" rel="noopener noreferrer" target="_blank">Python Print Same Line
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-rename-a-local-or-remote-branch-in-git/" rel="noopener noreferrer" target="_blank">Rename Branches in Git
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/coding-meaning-what-does-coding-mean/" rel="noopener noreferrer" target="_blank">What Does Coding Mean?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/what-is-data-analysis/" rel="noopener noreferrer" target="_blank">What is Data Analysis?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/css-comments-how-to-comment-out-css/" rel="noopener noreferrer" target="_blank">How to Comment Out CSS
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/double-vs-float-in-cpp-the-difference-between-floats-and-doubles/" rel="noopener noreferrer" target="_blank">Double vs Float in C++
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-global-variables-examples/" rel="noopener noreferrer" target="_blank">Python Global Variables
+                        </a>
+                    </div>
+                    <div class="footer-col footer-col-2">
+                        <a href="https://www.freecodecamp.org/news/cpp-operator-examples/" rel="noopener noreferrer" target="_blank">C++ Operators
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/excel-formulas-for-beginners/" rel="noopener noreferrer" target="_blank">Excel Formulas
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/break-in-python-nested-for-loop-break-if-condition-met-example/" rel="noopener noreferrer" target="_blank">Break in Python
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/text-align-in-css-how-to-align-text-in-center-with-html/" rel="noopener noreferrer" target="_blank">Text Align in CSS
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/minify-css-css-minifying-and-compression-explained/" rel="noopener noreferrer" target="_blank">How to Minify CSS
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-split-string-splitting-example/" rel="noopener noreferrer" target="_blank">Python Split String
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-list-insert-how-to-add-to-a-list-in-python/" rel="noopener noreferrer" target="_blank">Python List insert()
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/merge-sort-algorithm-python-and-java-examples-with-time-complexity/" rel="noopener noreferrer" target="_blank">Merge Sort Algorithm
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/what-is-an-svg-file/" rel="noopener noreferrer" target="_blank">What is an SVG File?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/rgb-color-html-and-css-guide/" rel="noopener noreferrer" target="_blank">RGB Colors Explained
+                        </a>
+                    </div>
+                    <div class="footer-col footer-col-3">
+                        <div class="footer-left">
+                            <a href="https://www.freecodecamp.org/news/cpp-vector-how-to-initialize-a-vector-in-a-constructor/" rel="noopener noreferrer" target="_blank">How Vectors Work in C++
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/javascript-wait-how-to-sleep-n-seconds-in-js-with-settimeout/" rel="noopener noreferrer" target="_blank">JavaScript .setTimeout()
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/excel-shortcuts-keyboard-shortcuts-for-beginners/" rel="noopener noreferrer" target="_blank">Excel Keyboard Shortcuts
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/excel-absolute-reference-cell-referencing-example/" rel="noopener noreferrer" target="_blank">Excel Absolute Reference
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/how-to-insert-a-checkbox-in-excel/" rel="noopener noreferrer" target="_blank">Insert Checkbox in Excel
+                            </a>
+                        </div>
+
+                        <div class="footer-right">
+                            <a href="https://www.freecodecamp.org/news/how-to-square-a-number-in-python-squaring-function/" rel="noopener noreferrer" target="_blank">Square a Number in Python
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/how-to-lock-cells-in-excel-excel-locked-cell-tutorial/" rel="noopener noreferrer" target="_blank">How to Lock Cells in Excel
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/how-to-remove-a-key-from-a-python-dictionary-delete-key-from-dict/" rel="noopener noreferrer" target="_blank">Python Delete Key from Dict
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/entry-level-tech-job-guide/" rel="noopener noreferrer" target="_blank">Beginner Tech Jobs Examples
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/crows-foot-notation-relationship-symbols-and-how-to-read-diagrams/" rel="noopener noreferrer" target="_blank">Crow’s Foot Notation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="col-header" data-test-label="our-nonprofit">Our Charity</div>
+            <div class="footer-divider"></div>
+            <div class="our-nonprofit">
+                <a href="https://www.freecodecamp.org/news/about/" rel="noopener noreferrer" target="_blank" data-test-label="about">
+                    About
+                </a>
+                <a href="https://www.linkedin.com/school/free-code-camp/people/" rel="noopener noreferrer" target="_blank" data-test-label="alumni">
+                    Alumni Network
+                </a>
+                <a href="https://github.com/freeCodeCamp/" rel="noopener noreferrer" target="_blank" data-test-label="open-source">
+                    Open Source
+                </a>
+                <a href="https://www.freecodecamp.org/news/shop/" rel="noopener noreferrer" target="_blank" data-test-label="shop">
+                    Shop
+                </a>
+                <a href="https://www.freecodecamp.org/news/support/" rel="noopener noreferrer" target="_blank" data-test-label="support">
+                    Support
+                </a>
+                <a href="https://www.freecodecamp.org/news/sponsors/" rel="noopener noreferrer" target="_blank" data-test-label="sponsors">
+                    Sponsors
+                </a>
+                <a href="https://www.freecodecamp.org/news/academic-honesty-policy/" rel="noopener noreferrer" target="_blank" data-test-label="honesty">
+                    Academic Honesty
+                </a>
+                <a href="https://www.freecodecamp.org/news/code-of-conduct/" rel="noopener noreferrer" target="_blank" data-test-label="coc">
+                    Code of Conduct
+                </a>
+                <a href="https://www.freecodecamp.org/news/privacy-policy/" rel="noopener noreferrer" target="_blank" data-test-label="privacy">
+                    Privacy Policy
+                </a>
+                <a href="https://www.freecodecamp.org/news/terms-of-service/" rel="noopener noreferrer" target="_blank" data-test-label="tos">
+                    Terms of Service
+                </a>
+                <a href="https://www.freecodecamp.org/news/copyright-policy/" rel="noopener noreferrer" target="_blank" data-test-label="copyright">
+                    Copyright Policy
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+        
+        
+        
+
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D6RKKP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+        
+    <script defer="" src="./freecodecamp_files/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon="{&quot;rayId&quot;:&quot;792275cb3a80daf4&quot;,&quot;token&quot;:&quot;bdb993c6dde44e178aabd9555e75e4f4&quot;,&quot;version&quot;:&quot;2022.11.3&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./freecodecamp_files/ads(7).html" data-google-container-id="a!1" data-load-complete="true"></iframe></div></ins><iframe src="./freecodecamp_files/globalstorage.html" style="position: absolute; width: 1px; height: 1px; left: -9999px;"></iframe></body><iframe id="google_esf" name="google_esf" src="./freecodecamp_files/zrt_lookup.html" style="display: none;"></iframe></html>
